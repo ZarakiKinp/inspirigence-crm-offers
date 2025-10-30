@@ -2,11 +2,11 @@
 
 ## 📄 Documents générés
 
-Ce dossier contient la proposition commerciale pour les offres CRM et d'automatisation Kommo d'Inspirigence Consulting.
+Ce dossier contient les documents commerciaux pour les offres CRM et d'automatisation Kommo d'Inspirigence Consulting.
 
 ### Fichiers disponibles
 
-1. **Inspirigence_Consulting_Offres_CRM_Kommo.pdf** - Document PDF final, prêt à être envoyé aux clients
+1. **Inspirigence_Consulting_Offres_CRM_Kommo.pdf** - Proposition commerciale complète (PDF)
    - Design moderne et professionnel
    - Palette de couleurs corporate (turquoise #117A65, bleu graphite #2E4053, or #F1C40F)
    - Structure complète avec :
@@ -17,11 +17,22 @@ Ce dossier contient la proposition commerciale pour les offres CRM et d'automati
      - Abonnements agence (Start, Pro, Elite)
      - Catalogue complet des services
 
-2. **Inspirigence_Consulting_Offres_CRM.html** - Version HTML du document
+2. **Inspirigence_Consulting_Offres_CRM.html** - Proposition commerciale (HTML)
    - Peut être ouvert dans n'importe quel navigateur
    - Optimisé pour l'impression (Ctrl+P pour imprimer en PDF)
    - Design responsive et moderne
    - Utilise les polices Google Fonts (Playfair Display, Inter, Cinzel)
+
+3. **Inspirigence_Catalogue_Complet_Kommo.pdf** - Catalogue complet des services (PDF)
+   - Tarification détaillée de tous les services Kommo
+   - 10 catégories de services (Architecture, Données, Automatisations, Bots, IA, etc.)
+   - Format structuré avec chaque section sur sa propre page
+   - Notes et conditions générales incluses
+
+4. **Inspirigence_Catalogue_Complet_Kommo.html** - Catalogue complet (HTML)
+   - Version web du catalogue
+   - Impression optimisée pour PDF
+   - Navigation facile entre les sections
 
 ## 🎨 Design
 

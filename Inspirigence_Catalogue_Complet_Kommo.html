@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspirigence Consulting - Catalogue Complet Kommo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&family=Cinzel:ital,wght@0,500;1,500&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        @media print {
+            .cover-page, .content-page {
+                page-break-after: always;
+            }
+            
+            .no-print {
+                display: none;
+            }
+            
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2E4053;
+            line-height: 1.6;
+            background: white;
+        }
+        
+        .cover-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0C223A 0%, #117A65 50%, #18B394 100%);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+        }
+        
+        .cover-logo {
+            position: absolute;
+            top: 40px;
+            text-align: center;
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-size: 28pt;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+        
+        .cover-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 44pt;
+            color: white;
+            text-align: center;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .cover-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 16pt;
+            color: #E8F8F5;
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        
+        .version-badge {
+            background: #F1C40F;
+            color: #2E4053;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13pt;
+            margin-top: 30px;
+        }
+        
+        .cover-footer {
+            position: absolute;
+            bottom: 40px;
+            font-size: 11pt;
+            color: #E8F8F5;
+            font-style: italic;
+        }
+        
+        .content-page {
+            padding: 80px 70px 100px 70px;
+            min-height: 100vh;
+        }
+        
+        .page-header {
+            border-bottom: 3px solid #117A65;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28pt;
+            color: #117A65;
+            margin-bottom: 10px;
+        }
+        
+        .catalog-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            background: linear-gradient(135deg, #117A65, #18B394);
+            color: white;
+            padding: 15px 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16pt;
+            font-weight: 600;
+            margin-bottom: 0;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .catalog-items {
+            background: white;
+            border: 2px solid #E8F8F5;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .catalog-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            border-bottom: 1px solid #E8F8F5;
+        }
+        
+        .catalog-item:last-child {
+            border-bottom: none;
+        }
+        
+        .catalog-item:nth-child(even) {
+            background: #F8F9FA;
+        }
+        
+        .item-name {
+            flex: 1;
+            font-size: 10.5pt;
+            color: #2E4053;
+        }
+        
+        .item-price {
+            font-weight: 600;
+            color: #117A65;
+            font-size: 11pt;
+            min-width: 120px;
+            text-align: right;
+        }
+        
+        .notes-box {
+            background: #E8F8F5;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 5px solid #117A65;
+        }
+        
+        .notes-box h3 {
+            color: #117A65;
+            font-size: 14pt;
+            margin-bottom: 15px;
+        }
+        
+        .notes-box p, .notes-box ul {
+            font-size: 10.5pt;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .notes-box ul {
+            margin-left: 20px;
+        }
+        
+        .contact-box {
+            background: white;
+            border: 2px solid #117A65;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .contact-box h3 {
+            color: #117A65;
+            font-size: 14pt;
+            margin-bottom: 15px;
+        }
+        
+        .contact-box p {
+            font-size: 11pt;
+            line-height: 1.8;
+        }
+        
+        strong {
+            color: #117A65;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- COVER PAGE -->
+    <div class="cover-page">
+        <div class="cover-logo">INSPIRIGENCE CONSULTING</div>
+        
+        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h1 class="cover-title">Catalogue Complet<br>des Travaux Kommo</h1>
+            
+            <p class="cover-subtitle">
+                Tarification complète & périmètre de services<br>
+                Architecture CRM, Automatisations & Intégrations
+            </p>
+            
+            <div class="version-badge">VERSION COMPLÈTE 2025</div>
+        </div>
+        
+        <div class="cover-footer">
+            Document de référence - Tarifs HT en MAD
+        </div>
+    </div>
+    
+    <!-- SECTION 1 -->
+    <div class="content-page">
+        <div class="catalog-section">
+            <h2 class="section-title">1. ARCHITECTURE & STRUCTURE CRM</h2>
+            <div class="catalog-items">
+                <div class="catalog-item">
+                    <div class="item-name">• Création de pipeline simple</div>
+                    <div class="item-price">700 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Pipeline complexe multi-étapes (automatisations et sous-processus)</div>
+                    <div class="item-price">1 400 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Pipeline client (livraison, fidélisation, suivi post-vente)</div>
+                    <div class="item-price">900 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Configuration des permissions utilisateurs</div>
+                    <div class="item-price">500 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Segmentation multi-pipeline (langue, région, produit)</div>
+                    <div class="item-price">800 MAD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 2 -->
+    <div class="content-page">
+        <div class="catalog-section">
+            <h2 class="section-title">2. CHAMPS & DONNÉES</h2>
+            <div class="catalog-items">
+                <div class="catalog-item">
+                    <div class="item-name">• Champ simple (texte, liste, date, montant)</div>
+                    <div class="item-price">200 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Champ calculé (formule dynamique entre champs)</div>
+                    <div class="item-price">600 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Liaison de fiches Lead ↔ Contact ↔ Entreprise</div>
+                    <div class="item-price">400 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Migration, nettoyage et import de données</div>
+                    <div class="item-price">1 800 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Champs automatiques : date de relance, durée en étape</div>
+                    <div class="item-price">800 MAD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 3 -->
+    <div class="content-page">
+        <div class="catalog-section">
+            <h2 class="section-title">3. AUTOMATISATIONS & WORKFLOWS</h2>
+            <div class="catalog-items">
+                <div class="catalog-item">
+                    <div class="item-name">• Assignation automatique selon source ou région</div>
+                    <div class="item-price">400 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Relance automatique (message, email, WhatsApp)</div>
+                    <div class="item-price">700 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Conditions temporelles et rappels planifiés</div>
+                    <div class="item-price">800 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Workflow multi-pipeline (transfert lead → client)</div>
+                    <div class="item-price">1 200 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Alerte automatique non-réponse ou inactivité</div>
+                    <div class="item-price">500 MAD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 4 -->
+    <div class="content-page">
+        <div class="catalog-section">
+            <h2 class="section-title">4. BOTS & CONVERSATIONS</h2>
+            <div class="catalog-items">
+                <div class="catalog-item">
+                    <div class="item-name">• Salesbot simple (message d'accueil ou relance)</div>
+                    <div class="item-price">900 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Bot de qualification avancée (collecte d'informations)</div>
+                    <div class="item-price">1 300 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Bot de relance automatique (non-réponse / 24h / 48h)</div>
+                    <div class="item-price">1 200 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Bot simulateur / calculateur (prix, devis, portes, etc.)</div>
+                    <div class="item-price">1 900 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Bot satisfaction / NPS (feedback automatique post-vente)</div>
+                    <div class="item-price">900 MAD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 5 -->
+    <div class="content-page">
+        <div class="catalog-section">
+            <h2 class="section-title">5. INTELLIGENCE & IA</h2>
+            <div class="catalog-items">
+                <div class="catalog-item">
+                    <div class="item-name">• Kommo AI Agent (base de connaissances + ton de marque)</div>
+                    <div class="item-price">2 500 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Fine-tuning IA (formation du modèle sur vos messages)</div>
+                    <div class="item-price">2 000 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• IA multi-usage (vente, support, éducation)</div>
+                    <div class="item-price">3 500 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Script conversationnel IA (dialogue intelligent multi-niveau)</div>
+                    <div class="item-price">2 500 MAD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 6 -->
+    <div class="content-page">
+        <div class="catalog-section">
+            <h2 class="section-title">6. INTÉGRATIONS WHATSAPP (WABA & LITE)</h2>
+            <div class="catalog-items">
+                <div class="catalog-item">
+                    <div class="item-name">• WABA Cloud API (connexion + 5 modèles + routage)</div>
+                    <div class="item-price">4 500 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• WABA avancée (10 modèles, bot complet, CAPI tracking)</div>
+                    <div class="item-price">9 500 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• WhatsApp Lite (canal simple sans Cloud API)</div>
+                    <div class="item-price">900 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Synchronisation CRM ↔ WhatsApp (conversations vers fiches leads)</div>
+                    <div class="item-price">1 500 MAD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 7 -->
+    <div class="content-page">
+        <div class="catalog-section">
+            <h2 class="section-title">7. MARKETING & TRACKING</h2>
+            <div class="catalog-items">
+                <div class="catalog-item">
+                    <div class="item-name">• Meta CAPI (tracking conversions lead, message, ROAS)</div>
+                    <div class="item-price">2 500 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Google Ads Tracking (conversion tracking + audiences)</div>
+                    <div class="item-price">2 000 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Tunnel formulaire web → Kommo</div>
+                    <div class="item-price">1 800 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Tracking UTM (source, campagne, canal)</div>
+                    <div class="item-price">800 MAD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 8 -->
+    <div class="content-page">
+        <div class="catalog-section">
+            <h2 class="section-title">8. INTÉGRATIONS EXTERNES</h2>
+            <div class="catalog-items">
+                <div class="catalog-item">
+                    <div class="item-name">• Google Sheets bidirectionnel (import/export auto)</div>
+                    <div class="item-price">2 000 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Slack (notifications leads, tâches)</div>
+                    <div class="item-price">1 200 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• ClickUp / Make / AppSheet (automatisation API complète)</div>
+                    <div class="item-price">2 500 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Notion / Discord (connexion via webhook)</div>
+                    <div class="item-price">1 000 MAD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 9 -->
+    <div class="content-page">
+        <div class="catalog-section">
+            <h2 class="section-title">9. REPORTING & TABLEAUX DE BORD</h2>
+            <div class="catalog-items">
+                <div class="catalog-item">
+                    <div class="item-name">• Dashboard Kommo (KPI leads, ventes, performance)</div>
+                    <div class="item-price">1 500 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Dashboard Google Sheets / Data Studio</div>
+                    <div class="item-price">2 000 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Rapport automatisé PDF (hebdo/mensuel)</div>
+                    <div class="item-price">900 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Alerte performance (baisse de conversion, non-réponse)</div>
+                    <div class="item-price">600 MAD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 10 -->
+    <div class="content-page">
+        <div class="catalog-section">
+            <h2 class="section-title">10. TÉLÉPHONIE & SUPPORT</h2>
+            <div class="catalog-items">
+                <div class="catalog-item">
+                    <div class="item-name">• Intégration Appels GSM → Kommo (routage + enregistrement audio)</div>
+                    <div class="item-price">5 300 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Intégration VoIP (Twilio, Ringover, Callbell)</div>
+                    <div class="item-price">3 000 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Automatisation "appel manqué → tâche / message WhatsApp"</div>
+                    <div class="item-price">900 MAD</div>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-name">• Tableau d'appels (durée, utilisateur, statut)</div>
+                    <div class="item-price">1 200 MAD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- NOTES & CONTACT -->
+    <div class="content-page">
+        <div class="page-header">
+            <h1>Notes & Conditions</h1>
+        </div>
+        
+        <div class="notes-box">
+            <h3>Remarques importantes :</h3>
+            <ul>
+                <li>Les prix indiqués sont <strong>HT (Hors Taxes)</strong> et exprimés en <strong>MAD (Dirham Marocain)</strong>.</li>
+                <li>Les tarifs peuvent varier selon le <strong>volume de travaux</strong> ou la <strong>complexité spécifique</strong> du projet.</li>
+                <li>Tous les travaux sont accompagnés d'un <strong>contrôle qualité</strong>, <strong>test fonctionnel</strong> et <strong>documentation d'intégration</strong>.</li>
+            </ul>
+        </div>
+        
+        <div class="notes-box">
+            <h3>Garanties & Compatibilité :</h3>
+            <p>Inspirigence Consulting garantit la compatibilité avec :</p>
+            <ul>
+                <li>Les dernières versions de <strong>Kommo CRM</strong></li>
+                <li><strong>WhatsApp Cloud API</strong> (Meta Business)</li>
+                <li><strong>Make.com</strong> (anciennement Integromat)</li>
+                <li>Principales intégrations tierces (Google Sheets, Slack, ClickUp, etc.)</li>
+            </ul>
+        </div>
+        
+        <div class="notes-box">
+            <h3>Support & Maintenance :</h3>
+            <ul>
+                <li>Support technique disponible pendant la mise en œuvre</li>
+                <li>Documentation complète fournie pour chaque intégration</li>
+                <li>Formation utilisateur incluse selon le périmètre</li>
+                <li>Garantie de bon fonctionnement 30 jours après livraison</li>
+            </ul>
+        </div>
+        
+        <div class="contact-box">
+            <h3>📞 Contact Projet & Support</h3>
+            <p>
+                <strong>Email :</strong> support@inspirigence.com<br>
+                <strong>Web :</strong> www.inspirigence.com<br>
+                <strong>Téléphone :</strong> +212 6 69 49 79 20
+            </p>
+            <p style="margin-top: 15px; font-style: italic; color: #7F8C8D;">
+                Inspirigence Consulting - Architecture digitale & automatisation intelligente
+            </p>
+        </div>
+    </div>
+    
+    <div class="no-print" style="position: fixed; top: 20px; right: 20px; background: #117A65; color: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); cursor: pointer; z-index: 1000;" onclick="window.print();">
+        🖨️ Imprimer / Sauvegarder en PDF
+    </div>
+</body>
+</html>
+
