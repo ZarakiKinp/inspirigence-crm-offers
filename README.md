@@ -34,6 +34,17 @@ Ce dossier contient les documents commerciaux pour les offres CRM et d'automatis
    - Impression optimisée pour PDF
    - Navigation facile entre les sections
 
+5. **Inspirigence_Offres_IA_Automatisation.pdf** - Offres IA Automatisation & Conversion (PDF)
+   - 3 packs d'automatisation IA progressifs (Starter → Scoring → Funnel)
+   - Design moderne et professionnel avec gradient cover
+   - Chaque pack avec objectif, livrables, résultats attendus et prix
+   - Tableau de comparaison des fonctionnalités
+
+6. **Inspirigence_Offres_IA_Automatisation.html** - Offres IA Automatisation (HTML)
+   - Version web des offres IA
+   - Optimisée pour l'impression
+   - Design responsive et moderne
+
 ## 🎨 Design
 
 Le document suit les guidelines de la marque Inspirigence :
